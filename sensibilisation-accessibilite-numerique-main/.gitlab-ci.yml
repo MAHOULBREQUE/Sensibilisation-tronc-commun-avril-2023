@@ -1,0 +1,21 @@
+image: alpine:latest
+
+pages:
+    stage: deploy
+    tags:
+    - npm
+
+    before_script:
+    - echo " => mise a jour des modules"
+    - git submodule sync --recursive
+    - git submodule update --init --recursive
+    script:
+    - echo " => copie dans public pour publication sur pages"
+    - mkdir .public
+    - - cp -r public/* .public/
+    - mv .public public
+    artifacts:
+        paths:
+        - public
+    only:
+    - main

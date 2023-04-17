@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title>Il était une fois... l'accessibilité numérique</title>
+	<meta charset="utf-8" /> <!-- Layout stylesheet -->
+	<meta name="robots" content="noindex, nofollow" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" id="oldCSS" href="css/themes/a42.css" type="text/css" media="all" />
+	<link rel="stylesheet" id="currentCSS" href="css/font-awesome.css" type="text/css" media="all" />
+	<link rel="stylesheet" id="currentCSS" href="css/font-luciole.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="highlight/styles/tomorrow-night-eighties.css" type="text/css" media="all" />
+	<link rel="stylesheet" id="currentCSS" href="css/themes/insee.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/print.min.css" type="text/css" media="print" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&&family=Roboto&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="js/Hammer.js"></script>
+	<script src="js/AccessReader.js"></script>
+	<script src="lang/lang_fr.js"></script>
+	<script src="js/screenfull.js"></script>
+	<script src="highlight/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script src="js/AccesSlide.js"></script>
+
+</head>
+
+<body>
+	<!-- <div id="load"><img src="img_slide/load.gif" alt="Chargement en cours" /></div> -->
+
+	<div id="screen" class="modeplan" data-effect="Eno">
+
+		<div id="wrapper">
+
+			<a href="#main" id="skip-link">Contenu</a>
+			<div id="prev-next"></div>
+			<div id="volet"></div>
+
+			<header id="banner" role="banner" class="main-header ">
+				<img id="logo" src="img_slide/logo-insee-header.png"
+					alt="Institut national de la statistique et des études économiques" />
+				<h1 class="main-title">Sensibilisation à l'accessibilité numérique</h1>
+				<img id="logo2" src="img_slide/logo_img_rani.png" alt="Réseau Accessibilité Numérique de l'Insee" />
+			</header>
+
+			<nav role="navigation" aria-label="sommaire" id="sommaire" class="tool-block tool-block-summary"
+				tabindex="-1"></nav>
+			<nav role="navigation" id="breadcrumb" class="breadcrumb"></nav>
+
+
+			<main role="main" id="main">
+
+				<section class="slide couv">
+					
+					<h2>Il était une fois... l'accessibilité numérique</h2>
+									<p>Sensibilisation à l'accessibilité numérique</p>
+								<p>Isabelle RAVET</p>
+					<p>Marie-Anne HOULBREQUE LOBO</p>
+				</section>
+				<!--
+				<section class="slide interslide">
+					<h2 class="text-center pb-5">Qui suis-je ?</h2>
+					<img src="img_slide/prez-soph.png" alt="" class="h80">
+
+
+				</section>
+				<section class="slide interslide">
+					<h2>Et vous ?</h2>
+					<div class="col col-left">
+
+						<img src="img_slide/fruits.png" alt="" class="pb-5">
+						<ul>
+							<li>Pomme : Jamais entendu parler d'accessibilité numérique</li>
+							<li>Citron : Déjà entendu parler.<br>Mais c'est quoi ? Est-ce que ça me concerne&nbsp;?
+							</li>
+							<li>Mandarine : Déjà entendu parler.<br>J'ai un rôle à jouer... mais lequel et comment ?
+							</li>
+							<li>Fraise : Déjà entendu parler.<br>Je fais déjà des choses... même si je ne comprends
+								pas tout.</li>
+						</ul>
+					</div>
+					<div class="col col-right Cmasque">
+						<h3>Horaires</h3>
+						<ul>
+							<li>9h30 - 12h30</li>
+							<li>13h30 - 16h30</li>
+						</ul>
+						<h3>Supports de formation</h3>
+						<p class="mt-0">Dans un courriel après la formation !</p>
+
+					</div>
+					-->
+
+				</section>
+				<!-- page de sommaire-->
+				<section class="slide plan">
+					<h2>Il était une fois... l'accessibilité numérique</h2>
+
+					<p><em>Parce que le périple de tous les grands héros se déroule ainsi : </em></p>
+					<ol>
+						<li>Prologue</li>
+						<li>Naissance du héros et appel de l'aventure</li>
+						<li>&Eacute;preuves et initiation</li>
+						<li>Affranchissement du mentor</li>
+						<li>Accomplissement de la quête</li>
+						<li>Retour au pays</li>
+						<li>&Eacute;pilogue</li>
+					</ol>
+				</section>
+				<!-- page de chapitre -->
+				<section class="slide interslide">
+					<h2>Prologue</h2>
+					<h3>Il était une fois...</h3>
+					<p>en l'an de grâce <strong class="big">1990</strong>, un homme, nommé
+						<strong class="big">Tim Berners-Lee</strong>, qui inventa...
+					</p>
+					<div class="Cmasque">
+						<figure>
+							<img src="img_slide/www.png" alt="le web">
+							<figcaption class="text-center">World Wide Web : Vaste toile (d’araignée) mondiale.
+							</figcaption>
+						</figure>
+						<ul class="text-center Cmasque">
+							<li><strong>1994</strong> : world wide web consortium (W3C).</li>
+							<li><strong>1999</strong> : web content accessibility guidelines (WCAG).</li>
+						</ul>
+						<!-- <blockquote class="Cmasque"><q>
+								<em>(Je souhaite)</em> mettre le Web et ses services à la disposition de tous les
+								individus,
+								quel que soit leur matériel ou logiciel, leur infrastructure réseau,
+								leur langue maternelle, leur culture, leur localisation géographique, ou
+								leurs aptitudes physiques ou mentales.
+							</q>
+							<cite>Tim Berners-Lee, « inventeur » du World Wide Web.</cite>
+						</blockquote> -->
+					</div>
+				</section>
+				<!-- page de sommaire-->
+				<section class="slide plan">
+					<h2>Il était une fois... l'accessibilité numérique</h2>
+					<p><em>Parce que le périple de tous les grands héros se déroule ainsi : </em></p>
+					<ol>
+						<li class="texte-barre" title="rubrique déjà parcourue">Prologue</li>
+						<li class="texte-surbrillance" aria-current="true">Naissance du héros et appel de l'aventure</li>
+						<li>&Eacute;preuves et initiation</li>
+						<li>Affranchissement du mentor</li>
+						<li>Accomplissement de la quête</li>
+						<li>Retour au pays</li>
+						<li>&Eacute;pilogue</li>
+					</ol>
+				</section>
+				<section class="slide interslide">
+					<h2>1999 - Naissance d'un concept universel : l'accessibilité numérique</h2>
+					<img src="img_slide/cigogne.png" alt="" class="float-left">
+					<img src="img_slide/Accessibility-chiffre.png" alt="">
+					<img src="img_slide/Accessibility.png" alt="">
+				</section>
+				<section class="slide interslide question">
+
+					<!--<div class="col col-left">-->
+						<h2 class="text-center">&Ecirc;tes-vous prêts à répondre à l'appel de l'aventure&nbsp;?</h2>
+						<br>
+						<img src="img_slide/starting blocks.png" alt="" class="h80">
+				<!--</div>
+					<div class="col col-right">
+						<h3>Donnez votre avis !</h3>
+						<ul>
+							<li>Réponse à l'oral</li>
+							<li>Vote lettres colorées</li>
+						</ul>
+						<img src="img_slide/vote-trois-choix.png" alt="">
+						 <p class="text-center">Comment voter avec zoom&nbsp;?</p>
+						<img src="img_slide/vote-zoom.jpg" alt="Voter avec zoom." class="h-100"> 
+					</div>-->
+				</section>
+
+				<!-- page de chapitre -->
+				<section class="slide interslide">
+					<h2>Qu’est-ce-que l’accessibilité numérique&nbsp;?</h2>
+					<h3>Question 1</h3>
+					<img src="img_slide/question.png" alt="" />
+					<p class="text-center lead">Selon vous, qu’est-ce que l’accessibilité numérique&nbsp;?</p>
+				</section>
+				<!-- page de chapitre -->
+				<section class="slide">
+					<h2>Qu’est-ce-que l’accessibilité numérique&nbsp;?</h2>
+					<h3>Réponse</h3>
+					<ul>
+						<li>Ensemble de <strong>bonnes pratiques</strong> et de <strong>règles</strong></li>
+						<li>Objectif : rendre les <mark>supports numériques</mark> accessibles à tous... y compris
+							<mark>aux personnes en situation de handicap</mark>.
+						</li>
+					</ul>
+
+					<h3 class="mt-5 titre-definition">Définition de l'accessibilité numérique</h3>
+					<p class="definition">
+						L'accessibilité numérique permet à quiconque de percevoir, comprendre, naviguer et
+						d'apporter sa contribution au numérique quels que soient les outils ou moyens utilisés.
+					</p>
+					<br>
+					<p class="text-center">Supports numériques&nbsp;? Personnes en situation de handicap&nbsp;?</p>
+				</section>
+
+
+
+				<!-- page de chapitre -->
+				<section class="slide interslide">
+					<h2>Question 2</h2>
+					<img src="img_slide/question.png" alt="" />
+					<p class="text-center lead">Pour vous, quels sont les différents types de supports numériques&nbsp;?
+					</p>
+				</section>
+
+				<!-- page  -->
+				<section class="slide">
+
+
+					<h2>Réponse</h2>
+					<h3>Les différents types de supports numériques</h3>
+					<img src="img_slide/supports-numeriques.jpg" alt="">
+					<div class="col col-left">
+						<ul>
+							<li>Sites web : intranet, extranet, internet</li>
+							<li>Applications mobiles : Android et IOS</li>
+							<li>Cours e-learning</li>
+							<li>Vidéos</li>
+							<li>Documents bureautiques : <br>traitement de texte, tableur (graphiques)... et PDF</li>
+							<li>Télévision</li>
+							<li>Mobiliers urbains</li>
+						</ul>
+					</div>
+					<div class="col col-right">
+						<img src="img_slide/mobilier-urbain.jpg" alt="">
+					</div>
+				</section>
+
+				<!-- page  -->
+				<section class="slide">
+
+					<h2><img src="img_slide/info.png" alt="" class="inline"> Un contenu unique quel que soit
+						le
+						support/quel que soit le handicap
+					</h2>
+					<div class="col col-left">
+						<p><em>L'accessibilité numérique ne consiste pas à démultiplier les supports&nbsp;!</em></p>
+						<p>L'accessibilité numérique consiste à créer <strong>un seul contenu</strong> qui respecte des
+							règles : </p>
+						<ul>
+							<li><strong>graphiques</strong>,</li>
+							<li><strong>fonctionnelles</strong></li>
+							<li>et <strong>techniques</strong>.</li>
+						</ul>
+					</div>
+					<div class="col col-right">
+						<figure>
+
+							<figcaption>Exemple avec un matériel physique :<br>escalier mécanique avec des marches en
+								braille</figcaption>
+							<img src="img_slide/escalator-braille.jpg" alt="escalator braille">
+						</figure>
+
+					</div>
+				</section>
+
+
+
+				<section class="slide interslide">
+					<img src="img_slide/question-small.png" alt="" class="float-left mr-2">
+					<img src="img_slide/vote-trois-choix.png" alt="Correspondance des boutons de vote dans zoom"
+						class="alignleft float-right">
+					<h2>Parlons handicap - Question 3</h2>
+					<div class="col col-left">
+						<h3>&Agrave; votre avis... </h3>
+						<p>D'après l'<abbr title="Organisation Mondiale de la Santé">OMS</abbr>, combien existe-t-il de
+							catégories de handicap&nbsp;?</p>
+						<ol>
+							<li><img src="img_slide/coeur-rouge.png" alt="1er coeur" class="inline"> 3 catégories</li>
+							<li><img src="img_slide/coeur-jaune.png" alt="2ème coeur" class="inline"> 5 catégories</li>
+							<li><img src="img_slide/coeur-vert.png" alt="3ème coeur" class="inline"> 10 catégories</li>
+						</ol>
+						</li>
+						</ol>
+					</div>
+					<div class="col col-right Cmasque">
+						<h3>Réponse 2 <img src="img_slide/coeur-jaune.png" alt="2ème coeur" class="inline"></h3>
+						<p>5 catégories</p>
+						<ol>
+							<li>Le handicap moteur (dont déficience motrice)</li>
+							<li>Le handicap sensoriel (vue, ouïe...)</li>
+							<li>Le handicap mental (dont déficience intellectuelle)</li>
+							<li>Le handicap psychique (pas de cause connue)<br><em>troubles dépressifs, burn-out,
+									bipolarité...</em></li>
+							<li>Les maladies invalidantes<br>
+								<em>endométriose, fybromyalgie, maladie de Crohn...</em>
+							</li>
+						</ol>
+					</div>
+				</section>
+				<section class="slide" style="display: block; opacity: 1;">
+					<h2>Quelques logotypes de handicap</h2>
+					<img src="img_slide/types-handicaps.jpg" alt="">
+					<div class="col col-left">
+						<ol>
+							<li>Maladies invalidantes</li>
+							<li>Déficience motrice (amputation)</li>
+							<li>Déficience motrice (fauteuil roulant)</li>
+							<li>Allergies</li>
+							<li>Maladies cardio-vasculaires</li>
+						</ol>
+					</div>
+					<div class="col col-right">
+						<ol start="6">
+							<li>Déficience intellectuelle ou handicap mental</li>
+							<li>Déficience auditive</li>
+							<li>Déficience motrice</li>
+							<li>Déficience visuelle</li>
+							<li>Déficience psychique ou maladie mentale</li>
+						</ol>
+					</div>
+				</section>
+
+				<section class="slide interslide">
+					<img src="img_slide/question-small.png" alt="" class="float-left mr-2">
+					<img src="img_slide/vote-trois-choix.png" alt="Correspondance des boutons de vote dans zoom"
+						class="alignleft float-right">
+					<h2>Question 4</h2>
+					<div class="col col-left">
+						<h3>&Agrave; votre avis... </h3>
+						<p>Tous les handicaps sont-ils visibles&nbsp;?</p>
+						<ol>
+							<li><img src="img_slide/coeur-rouge.png" alt="1er coeur" class="inline"> Oui, ça saute aux
+								yeux !</li>
+							<li><img src="img_slide/coeur-jaune.png" alt="2ème coeur" class="inline"> Non, 50% des
+								handicaps sont invisibles.</li>
+							<li><img src="img_slide/coeur-vert.png" alt="3ème coeur" class="inline"> Non, 80% des
+								handicaps sont invisibles.</li>
+						</ol>
+					</div>
+					<div class="col col-right Cmasque p-0">
+						<h3>Réponse 3 <img src="img_slide/coeur-vert.png" alt="3ème coeur" class="inline"></h3>
+						<img src="img_slide/handicap-visible-invisible.png" alt="">
+						<ul>
+							<li><strong>80 %</strong> des handicaps sont invisibles</li>
+							<li>Un handicap peut être <strong>permanent</strong> ou <strong>temporaire</strong>.</li>
+						</ul>
+						<p><a
+								href="https://www.linkedin.com/feed/update/urn:li:activity:7009781896549179392?utm_source=share&utm_medium=member_android">Témoignage
+								de Clara</a></p>
+					</div>
+				</section>
+				<section class="slide">
+					<h2>Le handicap en France, quelques chiffres</h2>
+
+					<div class="col col-left">
+						<ul>
+							<li><strong>1,7 million de déficients visuels</strong><br>
+								<em>Aveugles, malvoyants, trouble de perception des couleurs....</em>
+							</li>
+							<li><strong>1,6 million de déficients auditifs</strong><br><em>sourds,
+									malentendants</em></li>
+							<li><strong>2,3 millions de handicaps physiques</strong><br><em>Déficience du
+									contrôle musculaire, perte de sensibilité, douleur, tremblements...</em> </li>
+							<li><strong>0,7 million de handicaps cognitifs</strong><br><em>Dyslexie, troubles
+									de la concentration ou de la mémoire, épilepsie...</em> </li>
+							<li>Et tous les autres <br><em>Troubles temporaires dus à la fatigue, les pathologies liées
+									au
+									vieillissement, fractures, ...</em> </li>
+						</ul>
+					</div>
+					<div class="col col-right Cmasque">
+						<!--<img src="img_slide/chiffre1.jpg" alt="1 français sur 6, soit 12 millions">-->
+						<ul><li><strong>Tous types de handicaps confondus : 12 millions</strong>
+						<br>(source Insee, 2016)</li>
+						<!--<img src="img_slide/chiffre2.jpg"
+							alt="taux de chômage de 19% (10% pour l'ensemble de la population active)">-->
+							<li><strong>Taux de chômage des personnes en situation de handicap : 19%</strong>
+						</br>contre 9% pour le reste de la population, chiffres 2017
+					</br> (source AGEFIPH/POLE EMPLOI/DARES/INSEE)</li>
+					</ul>
+					</div>
+
+
+				</section>
+
+				<section class="slide">
+					<h2>Le handicap en France, quelques chiffres</h2>
+					<div class="col col-left">
+						<ul>
+
+							<li><strong>85 %</strong> des déficiences interviennent <strong>après l’âge de 16
+									ans</strong>.</li>
+							<li><strong>1 personne sur 2</strong> connaît une situation de
+								handicap au cours de sa vie professionnelle.</li>
+							<li><strong>8 %</strong> des hommes sont <strong>daltoniens</strong> (0,5 % des femmes).
+							</li>
+							<li><strong>3 à 5 %</strong> de personnes sont atteintes de troubles DYS (dont 1%
+								atteint de troubles sévères).</li>
+						</ul>
+					</div>
+					<div class="col col-right Cmasque">
+						<img src="img_slide/trouble-dys.png" alt="dyslexie, dyspraxie, dyscalculie, dysgraphie, dysorthographie, dysphasie" class="h-100">
+					</div>
+
+				</section>
+				<!-- page  -->
+
+				<!-- page  -->
+				<section class="slide">
+					<h2>Le handicap en France, quelques chiffres</h2>
+					<p>... Sans oublier...</p>
+					<div class="col col-left">
+						<h3>Les aidants familiaux</h3>
+						<img src="img_slide/chiffre3.jpg" alt="11 millions d'aidants familiaux en France. 13% des salariés sont des aidants">
+					</div>
+					<div class="col col-right">
+						<h3>La scolarisation des enfants en situation de handicap</h3>
+						<img src="img_slide/chiffre4.jpg"
+							alt="321476 enfants en situation de handicap scolarisés en milieux ordinaires pour 380000 enfants scolarisés en situation de handicap">
+						<p>Certains enfants handicapés ne sont pas scolarisés...</p>
+					</div>
+
+				</section>
+
+				<!-- Sequence -->
+
+
+				<section class="slide interslide">
+					<img src="img_slide/question-small.png" alt="" class="float-left mr-2">
+					<img src="img_slide/vote-trois-choix.png" alt="Correspondance des boutons de vote dans zoom"
+						class="alignleft float-right">
+					<h2>Question 5</h2>
+					<div class="col col-left-auto">
+						<h3>&Agrave; votre avis... </h3>
+						<p>L'aventure "A11Y" vous appelle, que répondez-vous&nbsp;?</p>
+						<ol>
+							<li><img src="img_slide/coeur-rouge.png" alt="1er coeur" class="inline"> Non, parce que je
+								ne suis pas<br>en situation de handicap.</li>
+							<li><img src="img_slide/coeur-jaune.png" alt="2ème coeur" class="inline"> Non, parce que je
+								ne crée pas<br>de sites web.</li>
+							<li><img src="img_slide/coeur-vert.png" alt="3ème coeur" class="inline"> Oui, parce que je
+								produis <br>régulièrement du contenu numérique.</li>
+						</ol>
+						</li>
+						</ol>
+					</div>
+					<div class="col col-right-auto Cmasque">
+						<h3>Réponse 3 <img src="img_slide/coeur-vert.png" alt="3ème coeur" class="inline"></h3>
+						<p>Contenus numériques :</p>
+						<ul>
+							<li>Documents bureautiques :
+								<ul>
+									<li>Writer, calc...</li>
+									<li>Documents pdf.</li>
+								</ul>
+							</li>
+							<li>Messagerie.</li>
+							<li>Contributeurs internet, intranet, twitter...</li>
+						</ul>
+					<!--	<h3>Réponses 1 <img src="img_slide/coeur-rouge.png" alt="1er coeur" class="inline">, 2 <img
+								src="img_slide/coeur-jaune.png" alt="2ème coeur" class="inline"> et 3 <img
+								src="img_slide/coeur-vert.png" alt="3ème coeur" class="inline"></h3>-->
+
+					</div>
+				</section>
+				<!-- page de sommaire-->
+				<section class="slide plan">
+					<h2>Il était une fois... l'accessibilité numérique</h2>
+					<p><em>Parce que le périple de tous les grands héros se déroule ainsi : </em></p>
+					<ol>
+						<li class="texte-barre" title="rubrique déjà parcourue">Prologue</li>
+						<li class="texte-barre" title="rubrique déjà parcourue">Naissance du héros et appel de l'aventure</li>
+						<li class="texte-surbrillance" aria-current="true"><strong>&Eacute;preuves et initiation</strong></li>
+						<li>Affranchissement du mentor</li>
+						<li>Accomplissement de la quête</li>
+						<li>Retour au pays</li>
+						<li>&Eacute;pilogue</li>
+					</ol>
+				</section>
+				<section class="slide interslide question">
+					<h2 class="text-center pb-2">&Eacute;preuves et initiation</h2>
+					<div class="col col-left">
+						<img src="img_slide/chat poteaux.png" alt="chat au sommet d'un poteau, le vrai gagnant de koh lanta" class="h50">
+
+					</div>
+					<div class="col col-right">
+						<ol class="ml-10p">
+							<li>La déficience motrice</li>
+							<li>La déficience auditive</li>
+							<li>Les déficiences mentales, cognitives et psychiques</li>
+							<li>La déficience visuelle</li>
+						</ol>
+					</div>
+
+
+				</section>
+
+
+				<!-- Diapo -->
+				<section class="slide">
+					<h2>1/4 - La déficience motrice</h2>
+					<img src="img_slide/logotypes-deficience-motrice.jpg" alt="">
+					<h3>Les types de déficiences</h3>
+
+					<ul>
+						<li>Tétraplégie</li>
+						<li>Paralysie cérébrale</li>
+						<li>Sclérose</li>
+						<li>Arthrite</li>
+						<li>Tendinite</li>
+						<li>...</li>
+					</ul>
+					<p><a href="https://www.atalan.fr/agissons/fr/handicap-moteur.html" target="_blank">Initiation à la
+							déficience motrice</a></p>
+					
+
+				</section>
+				<!-- page de chapitre -->
+				<section class="slide interslide">
+					<h2>Question 6</h2>
+					<img src="img_slide/question.png" alt="" />
+					<p class="text-center lead">Connaissez-vous des solutions d'accessibilité pour compenser la déficience motrice&nbsp;?</p>
+				</section>
+				<!-- Diapo -->
+				<section class="slide">
+					<h2>Les solutions matérielles et programmatives à la déficience motrice</h2>
+					<figure>
+						<img src="img_slide/outils-deficience-motrice.jpg" alt="" class="h-100">
+						<figcaption>Clavier guide-doigts, Touche tabulation, Souris ergonomique, Reconnaissance
+							vocale, Contacteur, Contacteur 2 boutons</figcaption>
+					</figure>
+				
+					<p>Exercices : tester la navigation clavier (touches Tab et Maj-Tab) sur le site <a href="https://www.librest.com/ " target="_blank">Librest</a> :</p>
+					<ul>
+						<li>Combien de clics pour s'inscrire à la newletter ?</li>
+						<li>Ajouter  <a href="https://www.librest.com/livres/la-suggestibilite--1900--alfred-binet_0-256765_9782747578912.html"  target="_blank">le livre "La suggestibilité"</a> au panier</li>
+					</ul>
+					<p><a href="https://www.youtube.com/watch?v=LiuGvwwfY-M">Un exemple de solution...</a></p>
+				</section>
+				<!-- Diapo -->
+				<section class="slide">
+					<h2>2/4 - La déficience auditive</h2>
+
+					<img src="img_slide/logotypes-deficience-auditive.jpg" alt="">
+					<h3>Les types de déficiences</h3>
+					<ul>
+						<li>Surdité</li>
+						<li>Malentendance</li>
+						<li>Acouphènes</li>
+					</ul>
+					<p>Un exemple : <a href="ressources/UnJourCommeLesAutres-Insee-silence.mp4"
+							target="_blank">Insee, un jour comme les autres.</a></p>
+				</section>
+				<!-- page de chapitre -->
+				<section class="slide interslide">
+					<h2>Question 7</h2>
+					<img src="img_slide/question.png" alt="" />
+					<p class="text-center lead">Connaissez-vous des solutions d'accessibilité pour compenser la déficience auditive&nbsp;?</p>
+				</section>
+				<section class="slide">
+					<h2>Quelques solutions à la déficience auditive</h2>
+					<!--<img src="img_slide/solutions-sourds.jpg" alt="" class="h-100">-->
+					<img src="img_slide/trotro lsf.png" alt="le dessin animé l'âne Trotro traduit en langue des signes française" class="h-100">
+					<img src="img_slide/boucle-magnetique.jpg" alt="" class="h-100">
+					<ul>
+						<li>Lecture labiale</li>
+						<li>Sous-titrages / transcription textuelle</li>
+						<li>Langue des signes française</li>
+						<li>Boucle magnétique</li>
+					</ul>
+					<p>Un exemple : <a href="ressources/Insee-comprendre-avec-sous-titres.mp4"
+							target="_blank">Pour comprendre les statistiques de l'Insee.</a></p>
+
+				</section>
+				<!-- Diapo -->
+				<section class="slide">
+					<h2>3/4 - Les déficiences mentales, cognitives et psychiques</h2>
+					<img src="img_slide/logotypes-deficience-psy.jpg" alt="">
+					<h3>Les types de déficiences</h3>
+					<ul>
+						<li>Dyslexie, dyspraxie, dyscalculie…</li>
+						<!--<li>Photosensibilité</li>-->
+						<li>Troubles de l’attention</li>
+						<li>Troubles de la mémoire...</li>
+					</ul>
+					<h4>Exemples</h4>
+					<ul>
+						<li><a href="ressources/entretien-avec-juliana-autiste.mp4" target="_blank">Entretien avec
+								Juliana, autiste Asperger</a></li>
+						<li><a href="ressources/dyslexie.htm" target="_blank">Lire comme un dyslexique</a></li>
+					</ul>
+				</section>
+				<!-- page de chapitre -->
+				<section class="slide interslide">
+					<h2>Question 8</h2>
+					<img src="img_slide/question.png" alt="" />
+					<p class="text-center lead">Connaissez-vous des solutions d'accessibilité pour compenser les déficiences mentales, cognitives et psychiques&nbsp;?</p>
+				</section>
+				<!-- Diapo -->
+				<section class="slide">
+					<h2>Quelques solutions aux déficiences mentales, cognitives et psychiques</h2>
+					<p><em>Critères ergonomiques de Bastien et Scapin (2 - Charge de travail).</em></p>
+					<ul>
+
+						<li>Prévoir un système d'auto-complétion.
+							<img src="img_slide/autocompletion.jpg" alt="">
+						</li>
+						<li>Prévoir des processus par étape. <img src="img_slide/processus-etape.jpg" alt=""></li>
+						<li>Limiter la densité informationnelle.
+							<ul>
+								<li><a href="img_slide/charge-de-travail-densite-informationnelle-bouygues01.jpg">Une
+										lettre d'information trop chargée</a> </li>
+								<li><a href="img_slide/charge-de-travail-densite-informationnelle-bouygues02.jpg">La
+										même
+										lettre d'information simplifiée</a> </li>
+
+							</ul>
+						</li>
+						<li>...</li>
+					</ul>
+				</section>
+				<!-- Diapo -->
+				<section class="slide">
+					<h2>4/4 - La déficience visuelle</h2>
+
+					<img src="img_slide/logotypes-deficience-visuelle.jpg" alt="">
+					<h3>Les types de déficiences</h3>
+					<ul>
+						<li>Cécité</li>
+						<li>Vision tubulaire</li>
+						<li>Glaucome</li>
+						<li>Daltonisme</li>
+						<li>...</li>
+					</ul>
+					<p><a href="https://www.atalan.fr/agissons/fr/daltonisme.html" target="_blank">Simulons quelques
+							handicaps visuels...</a></p>
+					<p><a href="img_slide/formulaire-erreur.jpg" target="_blank">Une conséquence du daltonisme sur
+							le formulaire SNCF</a></p>
+				</section>
+				<section class="slide interslide">
+					<h2>Question 9</h2>
+					<img src="img_slide/question.png" alt="" />
+					<p class="text-center lead">Connaissez-vous des solutions d'accessibilité pour compenser la déficience visuelle&nbsp;?</p>
+				</section>
+				<section class="slide">
+					<h2>Quelques solutions à la déficience visuelle</h2>
+					<ul>
+						<li>Activer le contraste renforcé : ALT + MAJ + Impr écran</li>
+						<li>Les claviers braille<br>
+							<img src="img_slide/clavier-braille.jpg" alt="">
+						</li>
+						<li>Les lecteurs d'écran (vocalisation)
+							<img src="img_slide/logiciels-vocalisation.jpg" alt="">
+							<ul>
+								<li><a href="ressources/PagePourLecteur_KO.html" target="_blank">Une page mal
+										conçue</a></li>
+								<li><a href="ressources/PagePourLecteur.html" target="_blank">Une page bien
+										conçue</a></li>
+							</ul>
+						</li>
+						<li>...</li>
+					</ul>
+				</section>
+				<!-- page de sommaire-->
+				<section class="slide plan">
+					<h2>Il était une fois... l'accessibilité numérique</h2>
+					<p><em>Parce que le périple de tous les grands héros se déroule ainsi : </em></p>
+					<img src="img_slide/montesquieu.jpg" class="float-right" alt="une chose n'est pas juste parce qu'elle est loi, mais elle doit être loi parce qu'elle est juste. Montesquieu ">
+					<ol>
+						<li class="texte-barre" title="rubrique déjà parcourue">Prologue</li>
+						<li class="texte-barre" title="rubrique déjà parcourue">Naissance du héros et appel de l'aventure</li>
+						<li class="texte-barre" title="rubrique déjà parcourue">&Eacute;preuves et initiation</li>
+						<li class="texte-surbrillance" aria-current="true">Affranchissement du mentor</li>
+						<li>Accomplissement de la quête</li>
+						<li>Retour au pays</li>
+						<li>&Eacute;pilogue</li>
+					</ol>
+
+				</section>
+				<section class="slide">
+					<h2>Notre mentor : La loi&nbsp;!</h2>
+
+					<img src="img_slide/loi1.jpg" alt="frise chronologique : en 2005, la loi pour l'égalité des droits et des chances, la participation à la citoyenneté des personnes handicapées. décraet d'application en 2009 avec naissance du RGAA" class="h-100">
+
+
+				</section>
+				<section class="slide ">
+					<img src="img_slide/rgaa.png" alt="" class="float-left">
+					<div class="float-left">
+						<h2>Guide de bonnes pratiques : le RGAA</h2>
+						<p>Le Référentiel Général pour l'Amélioration de l'Accessibilité (RGAA)</p>
+					</div>
+					<img src="img_slide/loi1-rgaa.jpg" alt="frise chronologique : officialisation du RGAA version 2 en 2009. Version 3 en 2016 et version 4 en 2018" class="clear h-100">
+				</section>
+				<section class="slide">
+					<h2>Les entités concernées par les obligations légales</h2>
+					<img src="img_slide/loi-concerne.jpg" alt="">
+					<ul>
+						<li>Les organismes publics</li>
+						<li>Les organismes délégataires d’une mission de service public.</li>
+						<li>Les personnes morales de droit privé à but non lucratif <br> (notamment les
+							associations de loi 1901) ayant une mission d’intérêt général et proposant
+							des services essentiels au public ou des services pour les personnes
+							handicapées.</li>
+						<li>Les entreprises privées dont le chiffre d’affaires (réalisé en France) est d’au
+							moins 250 millions d’euros. <br>(Cela concerne environ 500 entreprises en
+							France.)</li>
+					</ul>
+
+				</section>
+				<section class="slide ">
+					<img src="img_slide/dinum.jpg" alt="" class="float-right">
+					<h2>Le RGAA</h2>
+					<ul>
+						<li><a href="https://accessibilite.numerique.gouv.fr/">
+								https://accessibilite.numerique.gouv.fr/</a>
+						</li>
+					</ul>
+
+					<h3>Audit RGAA</h3>
+					<ul>
+						<li>13 thématiques : couleurs, présentation de l'information, navigation, images...</li>
+						<li>106 critères</li>
+					</ul>
+
+					<img src="img_slide/conformite-rgaa.jpg" alt="3 niveaux de conformité ">
+
+					<p class="text-center">Un site non audité est considéré comme "Non conforme".</p>
+				</section>
+
+				<section class="slide">
+					<h2>Textes législatifs complémentaires</h2>
+					<img src="img_slide/loi-travail.jpg" alt="2016: article relatif au travail et à la modernisation du dialogue social. En 2019, obligation porte sur le poste de travail d'un travailleur handicapé, sinon risque de discrimination." class="h-100">
+					<h3>Notion d'aménagement raisonnable </h3>
+					<p>«&nbsp;On entend par “aménagement raisonnable” les modifications et ajustements
+						<strong>nécessaires et appropriés</strong> n’imposant <strong>pas de charge disproportionnée ou
+							indue</strong>
+						apportés, en fonction des besoins dans une situation donnée, pour
+						assurer aux personnes handicapées la jouissance ou l’exercice, sur la
+						base de l’<strong>égalité avec les autres</strong>, de tous les droits de l’homme et de toutes
+						les libertés fondamentales.&nbsp;»
+					</p>
+					<cite class="small">Article 2 de la <abbr tabindex="0"
+							title="Convention relative aux droits des personnes handicapées">CRDPH</abbr>.</cite>
+				</section>
+				<section class="slide">
+					<h2>Sanctions</h2>
+					<h3>Refus d'aménagement raisonnable</h3>
+					<p>Considéré comme de la discrimination</p>
+					<p class="attention">Article 225-2 du code pénal&nbsp;: entre 3 et 5 ans d'emprisonnement et
+						45&nbsp;000 à 75&nbsp;000 euros d'amende.</p>
+					<br>
+					<h3>Manquement aux obligations d'affichage</h3>
+					<p>Une amende de 25&nbsp;000&nbsp;euros possiblement reconduite chaque année tant que le manquement
+						n’est
+						pas corrigé.
+					</p>
+				</section>
+				<section class="slide ">
+					<img src="img_slide/europe.jpg" alt="" class="float-left">
+					<h2>La directive européenne</h2>
+
+					<img src="img_slide/loi-europe.jpg" alt="f" class="clear">
+					<ul>
+						<li>Limitation du champ de l’obligation (organismes concernés, contenus, services).</li>
+						<li>Possibilité de dérogation pour charge disproportionnée.</li>
+						<li>Définition d’une déclaration de conformité.</li>
+						<li>Contrôle du niveau d’accessibilité par les États membres à prévoir en vue d’un rapport
+							triennal à la Commission européenne.</li>
+					</ul>
+
+					<div class="noprint sr-only">
+<p>						frise chronologique : de 2005 à 2019, directive à prendre en compte avant juin 2022</p>
+					</div>
+				</section>
+
+				<section class="slide">
+
+					<h2>&Agrave; l'Insee, où en est-on&nbsp;?</h2>
+
+					<p>Observatoire de la qualité : <a href="https://observatoire.numerique.gouv.fr/observatoire/">Les
+							250 démarches phares de l’État</a>.</p>
+					<div class="Cmasque">
+						<p>Un seul site Insee : le Recensement de la
+							population.
+						</p>
+						<img src="img_slide/bilan-rp.jpg" alt="" class="h-100">
+						<p><a
+								href="https://observatoire.numerique.gouv.fr/Demarches/848?view-mode=statistics&amp;date-debut=2021-07-01&amp;date-fin=2022-06-30">Voir
+								la synthèse des avis</a></p>
+					</div>
+				</section>
+
+				<section class="slide">
+					<h2>Une amélioration en continu</h2>
+					<p>De plus en plus de maîtrise d'ouvrage demandent des audits partiels ou complets.</p>
+					<p>Cela a permis </p>
+					<ul>
+						<li><span class="texte-fond">d'améliorer l'accessibilité de plusieurs services numériques de
+								l'Insee :</span>
+							<ul>
+								<li>Page contact du site Insee.fr,</li>
+								<li>Application Insee mobile.</li>
+							</ul>
+						</li>
+						<li><span class="texte-fond">de refondre des sites internet :</span>
+							<ul>
+								<li>RP et moi,</li>
+								<li>Statut de diffusion Sirene...</li>
+							</ul>
+						</li>
+						<li><span class="texte-fond">de prendre en compte l'accessibilité numérique dès le début d'un
+								projet :</span>
+							<ul>
+								<li>Poste de gestion Sirene 4</li>
+								<li>Téléprocédure d'habilitation des dirigeants d'entreprises</li>
+							</ul>
+						</li>
+					</ul>
+					</p>
+
+				</section>
+				<section class="slide">
+					<h2>&Eacute;tat des lieux en janvier 2023</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Nom de l'application</th>
+								<th>Taux de conformité (en %)</th>
+								<th>Référentiel</th>
+								<th>Date audit/ déclaration</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="texte-left">Mélopée - Enquête emploi (coleman)</td>
+								<td>33</td>
+								<td>RGAA 4.0</td>
+								<td>10/2020</td>
+							</tr>
+							<tr>
+								<td class="texte-left">Coleman</td>
+								<td>38</td>
+								<td>RGAA 4.1</td>
+								<td>11/2022</td>
+							</tr>
+							<tr>
+								<td class="texte-left">Collecte-recensement.insee.fr</td>
+								<td>39</td>
+								<td>RGAA 4.0</td>
+								<td>01/2020</td>
+							</tr>
+							<tr>
+								<td class="texte-left">CSNS</td>
+								<td>47</td>
+								<td>RGAA 4.1</td>
+								<td>05/2022</td>
+							</tr>
+							<tr>
+								<td class="texte-left">Authentification standard - Keycloak</td>
+								<td>64</td>
+								<td>RGAA 4.0</td>
+								<td>15/09/20</td>
+							</tr>
+							<tr>
+								<td class="texte-left">R2D2</td>
+								<td>66</td>
+								<td>RGAA 4.0</td>
+								<td>04/2020</td>
+							</tr>
+							<tr>
+								<td class="texte-left">Insee.fr</td>
+								<td>68</td>
+								<td>RGAA 4.1</td>
+								<td>10/2022</td>
+							</tr>
+							<tr>
+								<td class="texte-left">Dataviz des salaires</td>
+								<td>69</td>
+								<td>RGAA 4.1</td>
+								<td>10/2022</td>
+							</tr>
+							<tr>
+								<td class="texte-left">Authentification - personnalisée Keycloak</td>
+								<td>75</td>
+								<td>RGAA 4.0</td>
+								<td>15/09/20</td>
+							</tr>
+													<tr>
+								<td class="texte-left">TBEF</td>
+								<td>76</td>
+								<td>RGAA 4.1</td>
+								<td>07/2022</td>
+							</tr>
+							<tr>
+								<td class="texte-left">Le recensement et moi</td>
+								<td>78</td>
+								<td>RGAA 4.1</td>
+								<td>10/2022</td>
+							</tr>
+							<tr>
+								<td class="texte-left">Pyramide des âges</td>
+								<td>90</td>
+								<td>RGAA 4.1</td>
+								<td>07/2022</td>
+							</tr>
+							<!-- <tr>
+								<td class="texte-left">Avis de situation au répertoire Sirene</td>
+								<td>100</td>
+								<td>RGAA 4.1</td>
+								<td>08/2021</td>
+							</tr>
+							<tr>
+								<td class="texte-left">Téléprocédure d’habilitation des dirigeants d’entreprise</td>
+								<td>100</td>
+								<td>RGAA 4.0</td>
+								<td>03/2021</td>
+							</tr> -->
+						</tbody>
+					</table>
+
+				</section>
+				<section class="slide">
+					<h2>Taux de conformité à l'Insee</h2>
+					<p class="encadre">Le taux de conformité moyen calculé sur l’ensemble des produits vus par le Rani
+						est d’environ
+						<strong>35&nbsp;%</strong>.<br>Pour information, on estime qu’un site est relativement
+						<strong>«&nbsp;confortable&nbsp;» à partir de 75&nbsp;%.</strong>
+					</p>
+					<h3>3 sites Insee totalement conformes</h3>
+					<p>100% de conformité au RGAA 4.1 (106 critères) : <br>
+						<strong>Téléprocédure d’habilitation sur tous les
+							portails publics</strong>, <strong>Avis de situation Sirene</strong> et <strong>Changement
+							de statut de diffusion Sirene</strong>.
+					</p>
+					<img src="img_slide/site-tot-conforme.jpg" alt="">
+					<p class="text-center"><a href="https://habilitateur.sirene.recette.insee.fr/">Téléprocédure
+							d’habilitation sur tous les
+							portails publics</a> - <a href="https://avis-situation-sirene.developpement.insee.fr/">Avis
+							de
+							situation Sirene</a> - <a href="https://dvsirdcihmlht01.ad.insee.intra/">Statut de diffusion
+							Sirene</a></p>
+
+				</section>
+
+				<section class="slide plan">
+					<h2>Il était une fois... l'accessibilité numérique</h2>
+					<p><em>Parce que le périple de tous les grands héros se déroule ainsi : </em></p>
+					<ol>
+						<li class="texte-barre" title="rubrique déjà parcourue">Prologue</li>
+						<li class="texte-barre" title="rubrique déjà parcourue">Naissance du héros et appel de l'aventure</li>
+						<li class="texte-barre" title="rubrique déjà parcourue">&Eacute;preuves et initiation</li>
+						<li class="texte-barre" title="rubrique déjà parcourue">Affranchissement du mentor</li>
+						<li class="texte-surbrillance" aria-current="true">Accomplissement de la quête</li>
+						<li>Retour au pays</li>
+						<li>&Eacute;pilogue</li>
+					</ol>
+
+				</section>
+
+				<section class="slide interslide question">
+					<h2 class="text-center">Accomplissement de la quête</h2>
+					<img src="img_slide/chien sh.png" alt="" class="h80">
+					<p class="text-center">Surmonter les épreuves - apothéose - don suprême.</p>
+				</section>
+
+
+				<section class="slide">
+					<p class="ariane"><mark>Surmonter les épreuves</mark> -apothéose - don
+						suprême.</p>
+					<h2>Surmonter les épreuves de la communication numérique</h2>
+					<div class="col col-left  Cmasque">
+						<h3>La messagerie</h3>
+						<ul>
+							<li>Privilégier un fond blanc <strong>sans arrière-plan</strong>.</li>
+							<li>Taille de police de 12pt minimum. <br>
+								<em>Fichier - Options - Courrier - Papier à lettre et polices - Thèmes personnels -
+									Polices</em>
+							</li>
+							<li>Utiliser les outils de mise en forme de la barre d'outils (notamment les listes à
+								puces).
+								<img src="img_slide/outlook.jpg" alt="" class="w-100">
+							</li>
+							<li>Utiliser des couleurs de texte suffisamment contrastées par rapport au fond
+								<ul>
+									<li>Application <a href="https://app.contrast-finder.org/">Color Contrast
+											Finder</a>.
+									</li>
+									<li>Logiciel <a href="https://github.com/ThePacielloGroup/CCAe/releases">Color
+											Contrast Analyser</a>
+									</li>
+								</ul>
+							</li>
+
+						</ul>
+					</div>
+					<div class="col col-right Cmasque">
+						<h3>Messagerie et réseaux sociaux</h3>
+						<ul>
+							<li>&Eacute;viter les caractères cryptiques et émojis dans le corps du message. <br>
+								<a href="https://www.youtube.com/watch?v=OO1G70if4RU&t=225s">Faux gras, abus d'émojis :
+									le détournement des caractères Unicode, fléau pour l'accessibilité du web</a>
+							</li>
+							<li>&Eacute;viter l'utilisation d'émojis à la place des caractères<br>
+								<a href="https://www.youtube.com/watch?v=8UczcbjHjo4">Lecture par un lecteur d'écran
+									d'un
+									tweet avec émojis à la place des vrais caractères</a>
+							</li>
+						</ul>
+
+					</div>
+					<div class="noprint sr-only">
+						<h3>Commentaire</h3>
+						<p class="zoneCommentaire">
+						</p>
+					</div>
+				</section>
+
+
+
+				<section class="slide">
+					<p class="ariane"><mark>Surmonter les épreuves</mark> -apothéose - don
+						suprême.</p>
+					<h2>Surmonter les épreuves des documents Writer</h2>
+					<div class="col col-left Cmasque">
+						<ul>
+							<li><strong>Structure et mise en forme </strong>
+								<ul>
+									<li>Titre 1, Titre 2...</li>
+									<li>Listes à puces ou à numéros.</li>
+									<li>Table des matières<br>document de + de 4 ou 5 pages.</li>
+									<li>Pas de mise en forme avec les tableaux <br>choisir : colonnes.</li>
+									<li>Utiliser les fonctions de formatage <br><em>alignement, retrait de
+											paragraphes...</em><br>
+										au lieu des touches &lt;Tab&gt;, &lt;espace&gt; et &lt;Entrée&gt;.</li>
+								</ul>
+							</li>
+							<li><strong>Polices lisibles </strong>
+								<ul>
+									<li>Police sans serif (Arial, Verdana, <a href="https://luciole-vision.com/" target="_blank" title="luciole, ouvrir dans un nouvel onglet">Luciole</href></a>).</li>
+									<li>Taille minimum de 12pt.</li>
+									<li>Pas de justification.</li>
+									<li>Éviter le "tout majuscule".</li>
+									<li>Pas d’écriture inclusive.</li>
+								</ul>
+							</li>
+
+
+						</ul>
+					</div>
+					<div class="col col-right Cmasque">
+						<ul>
+							<li>Des couleurs bien contrastées.</li>
+							<li>Liens avec des intitulés explicites.</li>
+							<li>Texte de remplacement pour les photos, graphiques…</li>
+							<li>Méthode <strong>FALC</strong> : Facile à Lire et à Comprendre</li>
+							<li>Fiches à télécharger : <a href="ressources/fiches simplifier.zip">Simplifier les documents administratifs</a></li>
+							<li><strong>Tester l'accessibilité</strong> : Outils - Vérification de l'accessibilité<br>
+								<img src="img_slide/writer.jpg" alt="">
+							</li>
+						</ul>
+						<p><a
+								href="http://accesssibilite-numerique.gitlab-pages.insee.fr/accessibilite-document-bureautique/">Site
+								documentaire "Accessibilité des documents bureautiques"</a></p>
+					</div>
+					<div class="noprint sr-only">
+						<h3>Commentaire</h3>
+						<p class="zoneCommentaire">
+						</p>
+					</div>
+				</section>
+
+				<section class="slide">
+					<p class="ariane"><mark>Surmonter les épreuves</mark> -apothéose - don
+						suprême.</p>
+					<h2>Surmonter les épreuves des documents Calc</h2>
+					<ul class=" Cmasque">
+						<li><strong>Ajouter des étiquettes</strong>
+							<ul>
+								<li>Feuille > Plages ou expressions nommées > Etiquettes.</li>
+							</ul>
+						</li>
+						<li><strong>Entêtes sur une seule ligne</strong></li>
+						<li><strong>Éviter de fusionner ou fractionner des cellules</strong></li>
+						<li><strong>Éliminer les cellules vides</strong><br>
+							(écrire : «&nbsp;Non renseigné&nbsp;»)</li>
+						<li>Ne pas se servir des fonctionnalités avancées.</li>
+						<li>Des couleurs bien contrastées.</li>
+						<li>Veiller à ce que l'information ne soit pas portée uniquement par la couleur (graphiques).
+						</li>
+					</ul>
+					<!-- <p><a href="tableau.html">Lecture d'un tableau avec NVDA.</a></p> -->
+				</section>
+
+				<section class="slide interslide">
+					<img src="img_slide/question-small.png" alt="" class="float-left mr-2">
+					<img src="img_slide/vote-trois-choix.png" alt="Correspondance des boutons de vote dans zoom"
+						class="alignleft float-right">
+					<h2>Question 10 : Surmonterez-vous cette épreuve&nbsp;?</h2>
+					<h3>Lequel de ces graphiques n'est pas accessible&nbsp;?</h3>
+					<div class="float-left">
+						<ol start="1">
+							<li><img src="img_slide/coeur-rouge.png" alt="1er coeur" class="inline">
+								<img src="img_slide/graph2.png" alt="">
+							</li>
+						</ol>
+					</div>
+					<div class="float-left">
+						<ol start="2">
+							<li><img src="img_slide/coeur-jaune.png" alt="2ème coeur" class="inline">
+								<img src="img_slide/graph1.png" alt="">
+							</li>
+						</ol>
+					</div>
+					<div class="float-left">
+						<ol start="3">
+							<li><img src="img_slide/coeur-vert.png" alt="3ème coeur" class="inline">
+								<img src="img_slide/graph3.png" alt="">
+							</li>
+						</ol>
+
+					</div>
+					<div class="float-left Cmasque">
+						<h3 class="ml-2">Réponse 2 <img src="img_slide/coeur-jaune.png" alt="2ème coeur" class="inline">
+						</h3>
+					</div>
+
+				</section>
+				<section class="slide">
+					<p class="ariane"><strike>Surmonter les épreuves</strike> - <mark>apothéose</mark> - don
+						suprême.</p>
+					<h2>L'apothéose</h2>
+
+					<h3>Les fichiers PDF</h3>
+					<p>Si votre document est bien formaté, la moitié du chemin est faite !</p>
+					<ul>
+						<li>Fichier - Exporter vers - Exporter au format PDF</li>
+					</ul>
+					<img src="img_slide/option-pdf.jpg" alt="">
+
+				</section>
+
+				<section class="slide">
+					<p class="ariane"><strike>Surmonter les épreuves</strike> - <strike>apothéose</strike> -
+						<mark>don
+							suprême</mark> .
+					</p>
+					<h2 class="text-center">Le don suprême : penser "accessibilité"</h2>
+					<h3></h3>
+					<!--<img src="img_slide/benefice.jpg" alt="" class="h80">-->
+					<img src="img_slide/labrador lunettes.png" alt="" class="h80">
+					<p class="text-center">L'accessibilité numérique pour le bénéfice de tous</p>
+				</section>
+				<section class="slide">
+					<h2>L'accessibilité numérique favorise :</h2>
+					<h3>L’inclusion sociale</h3>
+					<img src="img_slide/inclusion-sociale.jpg" alt="" class="float-right">
+					<div>
+						<ul>
+							<li>Éviter la discrimination.</li>
+							<li>Permettre l’accès à l’information et aux démarches
+								en ligne à toutes et tous.</li>
+							<li>Favoriser le recrutement et le maintien dans l’emploi
+								de personnes en situation de handicap.</li>
+
+						</ul>
+						<p>Pour le bénéfice de tous : Satisfaire l’ensemble de ses utilisatrices et utilisateurs.
+						</p>
+					</div>
+					<img src="img_slide/ecoindex.jpg" alt="" class="float-right clear mt-5">
+					<div class="float-left">
+						<h3>Numérique responsable</h3>
+						<p>L'accessibilité numérique s'inscrit dans la démarche d'écoconception de services numériques.
+						</p>
+					</div>
+				</section>
+				<section class="slide plan">
+					<h2>Il était une fois... l'accessibilité numérique</h2>
+					<p><em>Parce que le périple de tous les grands héros se déroule ainsi : </em></p>
+					<ol>
+						<li class="texte-barre" title="rubrique déjà parcourue">Prologue</li>
+						<li class="texte-barre" title="rubrique déjà parcourue">Naissance du héros et appel de l'aventure</li>
+						<li class="texte-barre" title="rubrique déjà parcourue">&Eacute;preuves et initiation</li>
+						<li class="texte-barre" title="rubrique déjà parcourue">Affranchissement du mentor</li>
+						<li class="texte-barre" title="rubrique déjà parcourue">Accomplissement de la quête</li>
+						<li class="texte-surbrillance" aria-current="true">Retour au pays</li>
+						<li>&Eacute;pilogue</li>
+					</ol>
+
+				</section>
+				<section class="slide interslide question">
+					<h2 class="text-center">Le retour du héros</h2>
+
+					<img src="img_slide/alunissage.jpg" alt="" class="h80">
+
+				</section>
+				<section class="slide">
+
+					<h2>Le Réseau Accessibilité Numérique de l'Insee (Rani)</h2>
+
+					<div class="col col-left">
+						<h4>Les missions</h4>
+						<ul>
+							<li>Évaluation des applications,</li>
+							<li>Conseil et assistance pour les projets (internes ou progiciels),</li>
+							<li>Mise en place d’outils et de référentiels...</li>
+						</ul>
+						<h4>Proposition et participation </h4>
+						<ul>
+							<li>aux actions de communication, de sensibilisation ou de formation,</li>
+							<li>à la veille technologique,</li>
+							<li>à la documentation</li>
+						</ul>
+
+					</div>
+					<div class="col col-right">
+						<h4>Contacts et ressources</h4>
+						<p>10 correspondants à l'Insee</p>
+						<ul>
+							<li>Un espace Symphonie dédié : <a
+									href="https://intranet.insee.fr/rani">https://intranet.insee.fr/rani</a></li>
+							<li> <a href="http://accesssibilite-numerique.gitlab-pages.insee.fr/lettres-d-information/">Des
+									lettres d'information</a></li>
+							<li>Site
+								documentaire <a
+									href="http://accesssibilite-numerique.gitlab-pages.insee.fr/accessibilite-document-bureautique/">"Accessibilité
+									des documents bureautiques"</a></li>
+							<li>Bal fonctionnelle : <strong>dg75-rani@insee.fr</strong> ou <br><strong>:DG75-Réseau
+									accessibilite numerique</strong>
+
+							</li>
+							<li><mark>Salon Tchap : Insee - accessibilité numérique</mark></li>
+
+						</ul>
+					</div>
+					<div class="noprint sr-only">
+						<h3>Commentaire</h3>
+						<p class="zoneCommentaire">
+						</p>
+					</div>
+				</section>
+				<section class="slide">
+					<h2>Les offres de formation</h2>
+					<div class="float-left mt-5">
+						<ol>
+							<li>Sensibilisation à l'accessibilité numérique (tout public).</li>
+							<li>Contribuer accessible (contributeurs web).</li>
+							<li>Spécifions accessible (l'accessibilité pour les chefs de projets et maîtrises d'ouvrage).
+							</li>
+							<li>Codons accessible (l'accessibilité numérique pour les développeurs).</li>
+						</ol>
+					</div>
+					<img src="img_slide/info-modules.jpg" alt="">
+					<div class="noprint sr-only">
+						<h3>Commentaire</h3>
+						<p class="zoneCommentaire">
+						</p>
+					</div>
+				</section>
+				<section class="slide plan">
+					<h2>Il était une fois... l'accessibilité numérique</h2>
+					<p><em>Parce que le périple de tous les grands héros se déroule ainsi : </em></p>
+					<ol>
+						<li class="texte-barre" title="rubrique déjà parcourue">Prologue</li>
+						<li class="texte-barre" title="rubrique déjà parcourue">Naissance du héros et appel de l'aventure</li>
+						<li class="texte-barre" title="rubrique déjà parcourue">&Eacute;preuves et initiation</li>
+						<li class="texte-barre" title="rubrique déjà parcourue">Affranchissement du mentor</li>
+						<li class="texte-barre" title="rubrique déjà parcourue">Accomplissement de la quête</li>
+						<li class="texte-barre" title="rubrique déjà parcourue">Retour au pays</li>
+						<li class="texte-surbrillance" aria-current="true">&Eacute;pilogue</li>
+					</ol>
+
+				</section>
+
+				<!-- Diapo  FIN-->
+				<section class="slide interslide">
+					<h2 class="pb-2">&Eacute;pilogue</h2>
+					<!--<img src="img_slide/boss.jpg" alt="" class="h80">-->
+					<img src="img_slide/sh.PNG" alt="" class="h80">
+					<p class="text-center">Tant que ce n'est pas accessible, ce n'est pas terminé !</p>
+
+				</section>
+
+				<!-- Diapo  FIN-->
+				<section class="slide">
+					<h2 class="text-center">Votre impression sur cette journée ?</h2>
+					<!--<a href="https://metroretro.io/board/LBFA21LKOQ4K">Tableau Metro-Retro</a>
+					<img src="images/feedback.jpg" alt="" class="h-100">-->
+				</section>
+				<section class="slide end">
+					<h2 class="text-center">Merci pour votre attention !</h2>
+				</section>
+			</main>
+
+		</div><!-- #wrapper -->
+
+		<footer id="footer" role="contentinfo">
+
+			<div id="owner-info" class="owner-info a42-edito" role="dialog" tabindex="-1" style="display:none"
+				data-close="Fermer les informations éditeur">
+				<div role="document" tabindex="0">
+					<p><a href="http://access42.net/">Merci à Access42</a></p>
+				</div>
+			</div>
+		</footer>
+
+
+		<div id="nav-wrapper" class="tool-bar footer-nav clearfix navbar-invisible" tabindex="0">
+			<div id="wrappernav">
+
+			</div>
+		</div>
+		<div id="setting" class="tool-block tool-block-settings " role="dialog" tabindex="-1" style="display:none">
+		</div>
+
+	</div><!-- #screen -->
+
+	<div id="Caudio"></div>
+	<div id="Dcourante" aria-live="polite" aria-atomic="true" aria-hidden="true"></div>
+
+	<script src="js/slide.js"></script>
+	<script src="js/afontgarde.js"></script>
+	<script>
+		AFontGarde('FontAwesome', {
+			glyphs: '\uF101\uF101\uF101\uF101',
+			success: function () { console.log('success'); },
+			error: function () { console.log('timeout error'); },
+			timeout: 10000
+		});
+	</script>
+	<script type="text/javascript" src="js/AccessTooltip.js"></script>
+	<script type="text/javascript">
+		AccessTooltip({
+			objs: 'a, button, input, textarea, select,abbr,img',
+			tooltipClassName: 'access-tooltip',
+			toolTipBetween: 2,
+			toolTipUp: true,
+			mouse: true,
+			tempDelay: 1000,
+			useAriaDP: false,
+			useEscClose: true
+		});
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#test").click(function () {
+				//on ne fait rien, on reste sur la diapo
+			});
+		});
+	</script>
+
+	<script src="js/AccessNote.js" type="text/javascript"></script>
+	<script>AccessNote();</script>
+</body>
+
+</html>

@@ -1,0 +1,369 @@
+@page {
+  margin: 1cm;
+  width: 21cm;
+}
+
+/** Print in lanscape Format**/
+
+/* 
+#screen{
+ -webkit-transform: rotate(-90deg);
+		 -moz-transform:rotate(-90deg);
+		 filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+		 			transform:rotate(-90deg);
+}
+
+.slide{
+	page-break-after:always;
+}
+*/
+
+/*****/
+
+:root {
+  /**textes**/
+  /**couleurs rapport 2014**/
+  /** vert/bleu canard **/
+  /** rose **/
+  /** vert **/
+  /**orange**/
+  /** violet**/
+  /**couleurs rapport 2015**/
+  /**prune - violet clair**/
+  /**violet foncé**/
+  /**orange**/
+  /** vert clair**/
+  /** bleu primaire**/
+  /**gris fond**/
+}
+
+/* Tuto Alsacreations : Faites bonne impression - Feuille styles css imprimante */
+
+body {
+  /* Modifications : la couleur de fond de page - la police - l'unitÃ© utilisÃ©e pour la taille de la police  */
+  background-color: #fff;
+  /*font-family:Serif;*/
+  /*font-size:15pt;*/
+}
+
+* {
+  color: #000 !important;
+}
+
+a {
+  /* EmpÃ¨che le soulignÃ© par dÃ©faut du titre h1 */
+  text-decoration: none;
+}
+
+a:hover {
+  /* Suppression du soulignÃ© */
+  text-decoration: none;
+}
+
+p {
+  /* Modifications : alignement du texte - marges - unitÃ© des marges, police et taille de la police */
+  text-align: justify;
+  margin: 2pt 1pt 6pt 0;
+  font-size: 12pt;
+  color: #000;
+}
+
+img {
+  /* Modifications : couleur de la bordure - unitÃ©s et marges */
+  /*float:left;
+  margin:3pt 6pt 3pt 6pt;
+  padding:8pt;
+  background:#fff;
+  border:1pt solid #000;*/
+}
+
+/* fin Alsacreations */
+
+body {
+  width: auto!important;
+  margin: auto!important;
+  font-size: 10pt;
+  /*background-color: #fff;
+  color: #333;*/
+}
+
+/*{
+	background:none;
+	color:#333;
+}*/
+
+.slide {
+  clear: both;
+  position: relative;
+  display: block!important;
+  margin-bottom: 15pt;
+  padding: 15pt 1cm 0;
+  opacity: 1;
+}
+
+.slide.couv {
+  background: none;
+}
+
+.slide.couv h2 {
+  text-align: center;
+}
+
+.couv-inside {
+  position: static;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  background: none;
+}
+
+.slide.interslide {
+  background: none;
+  text-align: left;
+  border-top: 1pt solid;
+  padding-top: 20pt;
+}
+
+.slide.interslide-img {
+  background: none !important;
+}
+
+.slide.interslide-img .inside {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  padding: 0;
+}
+
+.slide img,
+.slide svg {
+  margin-left: 0;
+  page-break-inside: avoid;
+}
+
+.slide .logo img,
+.slide .logo svg {
+  margin-left: auto;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 15pt;
+  margin-bottom: 7pt;
+  padding-top: 0;
+}
+
+h1 + h2,
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6 {
+  margin-top: 10pt;
+}
+
+.slide h1,
+.slide h2,
+.slide h3,
+.slide h4,
+.slide h5,
+.slide caption {
+  page-break-inside: avoid;
+  page-break-after: avoid;
+}
+
+* > h1:first-child,
+* > h2:first-child,
+* > h3:first-child,
+* > h4:first-child,
+* > h5:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.slide ul {
+  padding-bottom: 0;
+}
+
+.slide ul li {
+  list-style: square;
+}
+
+.slide ul li::before {
+  display: none;
+}
+
+.slide p,
+.slide ul,
+.slide .pbi-avoid {
+  page-break-inside: avoid;
+}
+
+.slide p,
+.slide ul,
+.slide ol,
+.slide blockquote {
+  margin: 10pt 0;
+}
+
+.slide ul.services-garantis {
+  page-break-inside: initial;
+}
+
+.slide ul.services-garantis li {
+  page-break-inside: avoid;
+  margin-bottom: 5px;
+}
+
+/*.modeplan .slide,
+.slide {
+  border:0!important;
+}*/
+
+.slide.couv {
+  min-height: auto;
+}
+
+.col-1-2 {
+  float: none;
+  width: auto;
+  padding: 0;
+}
+
+.col-1-2 + .col-1-2 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+* + .col-1-2,
+h3 + .col-1-2,
+h3 + .col-1-2 + .col-1-2 {
+  margin-top: 10pt;
+}
+
+#nav-wrapper,
+#sommaire,
+#prev-next,
+.help-info,
+.noprint,
+.slide.noprint,
+#footer,
+#banner,
+#breadcrumb,
+#skip-link,
+.index,
+.slide .chapter {
+  display: none!important;
+}
+
+a {
+  color: #333!important;
+  text-decoration: none!important;
+}
+
+a[href]:after {
+  content: " [" attr(href) "]";
+  font-size: 10pt;
+  color: #666;
+  font-family: "achemine-r";
+}
+
+a[href^="#"]:after {
+  content: "";
+}
+
+a[title]:after {
+  content: " (" attr(title) ")";
+  font-size: 8pt;
+  font-style: italic;
+  color: #666;
+}
+
+.acc-note a[title]:after,
+.acc-set-note a[title]:after {
+  content: "";
+}
+
+.couv img {
+  margin: 0;
+}
+
+h2.small {
+  margin-top: 35px;
+}
+
+/*h3{
+	margin:30px 0 0 0;
+}*/
+
+h3:before {
+  display: none;
+}
+
+h2.small + h3 {
+  margin-top: 0;
+}
+
+/*h4{
+	margin:0;
+}*/
+
+.footnote {
+  page-break-inside: avoid;
+}
+
+.footnote {
+  margin-bottom: 30px;
+}
+
+.chapter-1.col-1-2,
+.chapter-2.col-1-2,
+.chapter-3.col-1-2 {
+  padding: 0!important;
+}
+
+.services-garantis .ville {
+  width: 85%;
+}
+
+.services-garantis .services {
+  width: 15%;
+}
+
+.services-garantis .services span {
+  display: inline-block;
+  min-width: 30px;
+  padding: 0 3px;
+  font-size: 1em;
+  font-family: "achemine-b";
+  text-align: center;
+}
+
+.services-garantis .services span.ter,
+.slide .legend-services span.ter {
+  border: 1px solid #E2DF24;
+}
+
+.services-garantis .services span.plus,
+.slide .legend-services span.plus {
+  border: 1px solid #6E1E78;
+  padding: 0 3px;
+}
+
+.services-garantis .services span.exp,
+.slide .legend-services span.exp {
+  border: 1px solid #0088CE;
+}
+
+table,
+tr,
+td,
+th {
+  border: 1px solid #333;
+  border-collapse: collapse;
+}
